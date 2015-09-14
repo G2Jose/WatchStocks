@@ -24,10 +24,20 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>Demo2.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 		<key>Notification - Demo WatchKit App.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>2</integer>
+		</dict>
+		<key>Notification - Demo2.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
 		</dict>
 		<key>Notification - WatchOS2.xcscheme</key>
 		<dict>
@@ -43,6 +53,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>FEC3EDC21BA73650001EC2FC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FED623B61BA7419400185BB9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
