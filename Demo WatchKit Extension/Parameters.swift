@@ -8,7 +8,10 @@
 
 import Foundation
 class Parameters{
-    static var baseURL: String = "http://192.168.0.18:3000/scrape?q="
+//    static var baseURL: String = "http://192.168.0.18:3000/scrape?q="
+    static var baseURL: String = "http://52.3.141.225:443/scrape?q="
+
+    
     
     var airports: [String: [String:String]] = [
         "YYZ": ["Toronto Pearson":""],

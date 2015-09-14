@@ -12,9 +12,17 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
 
+    
     @IBOutlet var gainPercentOutlet: WKInterfaceLabel!
+    @IBOutlet var gainAmountOutlet: WKInterfaceLabel!
+    
+    @IBAction func refreshButtonAction() {
+        update()
+    }
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
+        
+        
         
         // Configure interface objects here.
     }
@@ -56,6 +64,8 @@ class InterfaceController: WKInterfaceController {
             let urlPath = stock.url
             guard let endpoint = NSURL(string: urlPath) else { print("Error creating endpoint");return }
             let request = NSMutableURLRequest(URL:endpoint)
+            self.gainPercentOutlet.setText("Updating...")
+            self.gainAmountOutlet.setText("Updating...")
             print("Attempting to update stock\(stock.symbol) with url \(stock.url)")
             NSURLSession.sharedSession().dataTaskWithRequest(request) { (data, response, error) -> Void in
                 do {
@@ -71,9 +81,10 @@ class InterfaceController: WKInterfaceController {
                     stock.gainPercent = stock.gainAmount / (stock.costBasis) * 100
                     Portfolio.stocksToUpdate--
                     if(Portfolio.stocksToUpdate == 0){
+                        print("Updating Portfolio")
                         Portfolio.updatePortfolio()
                         self.gainPercentOutlet.setText((String(format: "%.2f",Portfolio.gainPercent))+"%")
-                        print("Updating Portfolio")
+                        self.gainAmountOutlet.setText("$"+(String(format: "%.2f",Portfolio.gainAmount)))
                     }
                 } catch let error as JSONError {
                     print(error.rawValue)
@@ -91,16 +102,6 @@ class InterfaceController: WKInterfaceController {
         for (stockName, stock) in Parameters.myStocks{
             buyStock(stockName, buyPrice: stock["buyPrice"]!, quantity: stock["quantity"]!, commission: stock["commission"]!)
         }
-//                dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
-//            for (_, stock) in Portfolio.stocks{
-//                stock.update()
-//            }
-//            Portfolio.updatePortfolio()
-//            dispatch_async(dispatch_get_main_queue(), {
-//                print("Finished updating portfolio")
-//                self.gainPercentOutlet.setText(String(format: "%.3f", Portfolio.gainPercent) + "%")
-//            });
-//        });
         update()
     }
 }

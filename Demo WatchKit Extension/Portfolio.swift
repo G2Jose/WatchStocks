@@ -20,8 +20,16 @@ class Portfolio{
         stocks[stock.symbol] = stock
         stocksToUpdate++
     }
-    
+    static func clearPortfolio(){
+        costBasis = 0
+        marketValue = 0
+        gainAmount = 0
+        gainPercent = 0
+        stocksToUpdate = 0
+        
+    }
     static func updatePortfolio(){
+        clearPortfolio()
         print("Debug: Attempting to update portfolio")
         for (_, stock) in self.stocks{
             self.marketValue += stock.marketValue

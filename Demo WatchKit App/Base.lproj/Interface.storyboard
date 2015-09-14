@@ -10,12 +10,26 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Demo_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label alignment="center" verticalAlignment="center" text="Loading..." id="goF-Yz-QEd">
-                            <color key="textColor" red="0.0" green="0.91059313322368418" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            <fontDescription key="font" style="UICTFontTextStyleTitle1"/>
-                        </label>
+                        <group width="1" alignment="center" verticalAlignment="center" layout="vertical" id="NaC-c3-WzU">
+                            <items>
+                                <label alignment="center" verticalAlignment="center" text="Loading..." id="goF-Yz-QEd">
+                                    <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" style="UICTFontTextStyleTitle1"/>
+                                </label>
+                                <button width="1" alignment="left" title="Refresh" id="zMy-1m-Lj3">
+                                    <connections>
+                                        <action selector="refreshButtonAction" destination="AgC-eL-Hgc" id="cnb-Lc-QXl"/>
+                                    </connections>
+                                </button>
+                                <label alignment="center" text="Loading..." id="XT5-mV-MGy">
+                                    <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" style="UICTFontTextStyleTitle1"/>
+                                </label>
+                            </items>
+                        </group>
                     </items>
                     <connections>
+                        <outlet property="gainAmountOutlet" destination="XT5-mV-MGy" id="89q-0A-TBa"/>
                         <outlet property="gainPercentOutlet" destination="goF-Yz-QEd" id="jwe-Og-biP"/>
                     </connections>
                 </controller>

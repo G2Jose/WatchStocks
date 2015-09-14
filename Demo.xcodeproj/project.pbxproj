@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FEC3EDBE1BA664CC001EC2FC /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC3EDBD1BA664CC001EC2FC /* Parameters.swift */; settings = {ASSET_TAGS = (); }; };
+		FEC3EDC01BA68414001EC2FC /* StocksComplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC3EDBF1BA68414001EC2FC /* StocksComplication.swift */; settings = {ASSET_TAGS = (); }; };
 		FED7D05D1BA4D5CD00AEA0BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED7D05C1BA4D5CD00AEA0BA /* AppDelegate.swift */; };
 		FED7D05F1BA4D5CD00AEA0BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED7D05E1BA4D5CD00AEA0BA /* ViewController.swift */; };
 		FED7D0621BA4D5CD00AEA0BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FED7D0601BA4D5CD00AEA0BA /* Main.storyboard */; };
@@ -70,6 +71,7 @@
 
 /* Begin PBXFileReference section */
 		FEC3EDBD1BA664CC001EC2FC /* Parameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parameters.swift; sourceTree = "<group>"; };
+		FEC3EDBF1BA68414001EC2FC /* StocksComplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StocksComplication.swift; sourceTree = "<group>"; };
 		FED7D0591BA4D5CD00AEA0BA /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FED7D05C1BA4D5CD00AEA0BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FED7D05E1BA4D5CD00AEA0BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				FED7D0871BA4D5CE00AEA0BA /* ComplicationController.swift */,
 				FED7D0891BA4D5CE00AEA0BA /* Assets.xcassets */,
 				FED7D08B1BA4D5CE00AEA0BA /* Info.plist */,
+				FEC3EDBF1BA68414001EC2FC /* StocksComplication.swift */,
 				FED7D07F1BA4D5CE00AEA0BA /* Supporting Files */,
 			);
 			path = "Demo WatchKit Extension";
@@ -325,6 +328,7 @@
 				FEC3EDBE1BA664CC001EC2FC /* Parameters.swift in Sources */,
 				FED7D0881BA4D5CE00AEA0BA /* ComplicationController.swift in Sources */,
 				FEDABED91BA4E78600471EF1 /* Stock.swift in Sources */,
+				FEC3EDC01BA68414001EC2FC /* StocksComplication.swift in Sources */,
 				FED7D0841BA4D5CE00AEA0BA /* ExtensionDelegate.swift in Sources */,
 				FED7D0821BA4D5CE00AEA0BA /* InterfaceController.swift in Sources */,
 				FEDABED71BA4E75E00471EF1 /* Portfolio.swift in Sources */,
