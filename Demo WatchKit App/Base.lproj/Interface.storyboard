@@ -13,7 +13,7 @@
                         <group width="1" alignment="center" verticalAlignment="center" layout="vertical" id="NaC-c3-WzU">
                             <items>
                                 <label alignment="center" verticalAlignment="center" text="Loading..." id="goF-Yz-QEd">
-                                    <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" style="UICTFontTextStyleTitle1"/>
                                 </label>
                                 <button width="1" alignment="left" title="Refresh" id="zMy-1m-Lj3">
@@ -22,7 +22,7 @@
                                     </connections>
                                 </button>
                                 <label alignment="center" text="Loading..." id="XT5-mV-MGy">
-                                    <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" style="UICTFontTextStyleTitle1"/>
                                 </label>
                             </items>

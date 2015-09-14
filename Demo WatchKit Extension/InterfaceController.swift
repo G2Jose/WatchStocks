@@ -17,14 +17,13 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet var gainAmountOutlet: WKInterfaceLabel!
     
     @IBAction func refreshButtonAction() {
+        print("---------REFRESH BUTTON PRESSED---------")
+        Portfolio.clearPortfolio()
+        addStocks()
         update()
     }
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
-        
-        
-        
-        // Configure interface objects here.
     }
     
     
@@ -35,14 +34,10 @@ class InterfaceController: WKInterfaceController {
         }
     }
     
-    
-    
     override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
         super.willActivate()
-        
-        initializeStocks()
-        
+        addStocks()
+        update()
     }
 
     override func didDeactivate() {
@@ -50,7 +45,7 @@ class InterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
     
-    func buyStock(symbol: String, buyPrice: Double, quantity: Double, commission: Double){
+    func initializeStocks(symbol: String, buyPrice: Double, quantity: Double, commission: Double){
         Portfolio.addStock(Stock(symbol:symbol, buyPrice: buyPrice, quantity: quantity, commission: commission))
     }
     
@@ -60,6 +55,9 @@ class InterfaceController: WKInterfaceController {
     }
     
     func update(){
+        print("Running update()")
+        self.gainPercentOutlet.setTextColor(UIColor.whiteColor())
+        self.gainAmountOutlet.setTextColor(UIColor.whiteColor())
         for (_, stock) in Portfolio.stocks{
             let urlPath = stock.url
             guard let endpoint = NSURL(string: urlPath) else { print("Error creating endpoint");return }
@@ -81,10 +79,23 @@ class InterfaceController: WKInterfaceController {
                     stock.gainPercent = stock.gainAmount / (stock.costBasis) * 100
                     Portfolio.stocksToUpdate--
                     if(Portfolio.stocksToUpdate == 0){
-                        print("Updating Portfolio")
-                        Portfolio.updatePortfolio()
-                        self.gainPercentOutlet.setText((String(format: "%.2f",Portfolio.gainPercent))+"%")
-                        self.gainAmountOutlet.setText("$"+(String(format: "%.2f",Portfolio.gainAmount)))
+                        dispatch_async(dispatch_get_main_queue()){
+                            print("Updating Portfolio")
+                            Portfolio.updatePortfolio()
+                            var color: UIColor
+                            var prefix: String = ""
+                            if(Portfolio.gainAmount>=0){
+                                color = UIColor.greenColor()
+                                prefix = "+"
+                            }else{
+                                color = UIColor.redColor()
+                                prefix = "-"
+                            }
+                            self.gainPercentOutlet.setText(prefix+(String(format: "%.2f",Portfolio.gainPercent))+"%")
+                            self.gainAmountOutlet.setText(prefix+"$"+(String(format: "%.2f",Portfolio.gainAmount)))
+                            self.gainPercentOutlet.setTextColor(color)
+                            self.gainAmountOutlet.setTextColor(color)
+                        }
                     }
                 } catch let error as JSONError {
                     print(error.rawValue)
@@ -94,14 +105,10 @@ class InterfaceController: WKInterfaceController {
                 }.resume()
         }
     }
-
     
-    
-    
-    func initializeStocks(){
+    func addStocks(){
         for (stockName, stock) in Parameters.myStocks{
-            buyStock(stockName, buyPrice: stock["buyPrice"]!, quantity: stock["quantity"]!, commission: stock["commission"]!)
+            initializeStocks(stockName, buyPrice: stock["buyPrice"]!, quantity: stock["quantity"]!, commission: stock["commission"]!)
         }
-        update()
     }
 }

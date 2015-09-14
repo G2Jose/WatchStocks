@@ -19,12 +19,6 @@ class Stock{
     var commission: Double = 0
     var url: String = ""
     
-    
-    
-    
-    
-    
-    
     init(symbol: String, buyPrice: Double, quantity: Double, commission: Double){
         self.symbol = symbol
         self.buyPrice = buyPrice
