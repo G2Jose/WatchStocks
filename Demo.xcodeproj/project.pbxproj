@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FEC3EDBE1BA664CC001EC2FC /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC3EDBD1BA664CC001EC2FC /* Parameters.swift */; settings = {ASSET_TAGS = (); }; };
 		FED7D05D1BA4D5CD00AEA0BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED7D05C1BA4D5CD00AEA0BA /* AppDelegate.swift */; };
 		FED7D05F1BA4D5CD00AEA0BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED7D05E1BA4D5CD00AEA0BA /* ViewController.swift */; };
 		FED7D0621BA4D5CD00AEA0BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FED7D0601BA4D5CD00AEA0BA /* Main.storyboard */; };
@@ -21,6 +22,8 @@
 		FED7D0861BA4D5CE00AEA0BA /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED7D0851BA4D5CE00AEA0BA /* NotificationController.swift */; };
 		FED7D0881BA4D5CE00AEA0BA /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED7D0871BA4D5CE00AEA0BA /* ComplicationController.swift */; };
 		FED7D08A1BA4D5CE00AEA0BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FED7D0891BA4D5CE00AEA0BA /* Assets.xcassets */; };
+		FEDABED71BA4E75E00471EF1 /* Portfolio.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDABED61BA4E75E00471EF1 /* Portfolio.swift */; };
+		FEDABED91BA4E78600471EF1 /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDABED81BA4E78600471EF1 /* Stock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +69,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FEC3EDBD1BA664CC001EC2FC /* Parameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parameters.swift; sourceTree = "<group>"; };
 		FED7D0591BA4D5CD00AEA0BA /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FED7D05C1BA4D5CD00AEA0BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FED7D05E1BA4D5CD00AEA0BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +89,8 @@
 		FED7D0871BA4D5CE00AEA0BA /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		FED7D0891BA4D5CE00AEA0BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FED7D08B1BA4D5CE00AEA0BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEDABED61BA4E75E00471EF1 /* Portfolio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Portfolio.swift; sourceTree = "<group>"; };
+		FEDABED81BA4E78600471EF1 /* Stock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +157,9 @@
 		FED7D07E1BA4D5CE00AEA0BA /* Demo WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				FEDABED61BA4E75E00471EF1 /* Portfolio.swift */,
+				FEDABED81BA4E78600471EF1 /* Stock.swift */,
+				FEC3EDBD1BA664CC001EC2FC /* Parameters.swift */,
 				FED7D0811BA4D5CE00AEA0BA /* InterfaceController.swift */,
 				FED7D0831BA4D5CE00AEA0BA /* ExtensionDelegate.swift */,
 				FED7D0851BA4D5CE00AEA0BA /* NotificationController.swift */,
@@ -232,6 +241,7 @@
 		FED7D0511BA4D5CD00AEA0BA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "George Jose";
 				TargetAttributes = {
@@ -243,6 +253,7 @@
 					};
 					FED7D0791BA4D5CE00AEA0BA = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = LXR9UEALQ7;
 					};
 				};
 			};
@@ -311,9 +322,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FED7D0861BA4D5CE00AEA0BA /* NotificationController.swift in Sources */,
+				FEC3EDBE1BA664CC001EC2FC /* Parameters.swift in Sources */,
 				FED7D0881BA4D5CE00AEA0BA /* ComplicationController.swift in Sources */,
+				FEDABED91BA4E78600471EF1 /* Stock.swift in Sources */,
 				FED7D0841BA4D5CE00AEA0BA /* ExtensionDelegate.swift in Sources */,
 				FED7D0821BA4D5CE00AEA0BA /* InterfaceController.swift in Sources */,
+				FEDABED71BA4E75E00471EF1 /* Portfolio.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,10 +461,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Demo WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.georgejose.Demo.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -462,10 +479,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Demo WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.georgejose.Demo.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -546,6 +566,7 @@
 				FED7D0901BA4D5CE00AEA0BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FED7D0921BA4D5CE00AEA0BA /* Build configuration list for PBXNativeTarget "Demo WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -554,6 +575,7 @@
 				FED7D0941BA4D5CE00AEA0BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FED7D0961BA4D5CE00AEA0BA /* Build configuration list for PBXNativeTarget "Demo" */ = {
 			isa = XCConfigurationList;
@@ -562,6 +584,7 @@
 				FED7D0981BA4D5CE00AEA0BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

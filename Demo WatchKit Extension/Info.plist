@@ -44,6 +44,15 @@
 	</dict>
 	<key>RemoteInterfacePrincipalClass</key>
 	<string>$(PRODUCT_MODULE_NAME).InterfaceController</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
+		<true/>
+		<key>NSIncludesSubdomains</key>
+		<true/>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>WKExtensionDelegateClassName</key>
 	<string>$(PRODUCT_MODULE_NAME).ExtensionDelegate</string>
 </dict>
