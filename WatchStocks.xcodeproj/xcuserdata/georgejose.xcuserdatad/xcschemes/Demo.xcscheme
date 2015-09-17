@@ -17,7 +17,7 @@
                BlueprintIdentifier = "FED7D0581BA4D5CD00AEA0BA"
                BuildableName = "Demo.app"
                BlueprintName = "Demo"
-               ReferencedContainer = "container:Demo.xcodeproj">
+               ReferencedContainer = "container:WatchStocks.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
             BlueprintIdentifier = "FED7D0581BA4D5CD00AEA0BA"
             BuildableName = "Demo.app"
             BlueprintName = "Demo"
-            ReferencedContainer = "container:Demo.xcodeproj">
+            ReferencedContainer = "container:WatchStocks.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -58,7 +58,7 @@
             BlueprintIdentifier = "FED7D0581BA4D5CD00AEA0BA"
             BuildableName = "Demo.app"
             BlueprintName = "Demo"
-            ReferencedContainer = "container:Demo.xcodeproj">
+            ReferencedContainer = "container:WatchStocks.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -77,7 +77,7 @@
             BlueprintIdentifier = "FED7D0581BA4D5CD00AEA0BA"
             BuildableName = "Demo.app"
             BlueprintName = "Demo"
-            ReferencedContainer = "container:Demo.xcodeproj">
+            ReferencedContainer = "container:WatchStocks.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

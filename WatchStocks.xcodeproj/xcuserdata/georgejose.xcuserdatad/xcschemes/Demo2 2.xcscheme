@@ -17,7 +17,7 @@
                BlueprintIdentifier = "FED623B61BA7419400185BB9"
                BuildableName = "Demo2.app"
                BlueprintName = "Demo2"
-               ReferencedContainer = "container:Demo.xcodeproj">
+               ReferencedContainer = "container:WatchStocks.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -31,7 +31,7 @@
                BlueprintIdentifier = "FED623C21BA7419400185BB9"
                BuildableName = "Demo2 Extension.appex"
                BlueprintName = "Demo2 Extension"
-               ReferencedContainer = "container:Demo.xcodeproj">
+               ReferencedContainer = "container:WatchStocks.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -45,7 +45,7 @@
                BlueprintIdentifier = "FED7D0581BA4D5CD00AEA0BA"
                BuildableName = "Demo.app"
                BlueprintName = "Demo"
-               ReferencedContainer = "container:Demo.xcodeproj">
+               ReferencedContainer = "container:WatchStocks.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -63,7 +63,7 @@
             BlueprintIdentifier = "FED623B61BA7419400185BB9"
             BuildableName = "Demo2.app"
             BlueprintName = "Demo2"
-            ReferencedContainer = "container:Demo.xcodeproj">
+            ReferencedContainer = "container:WatchStocks.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -89,7 +89,7 @@
             BlueprintIdentifier = "FED623B61BA7419400185BB9"
             BuildableName = "Demo2.app"
             BlueprintName = "Demo2"
-            ReferencedContainer = "container:Demo.xcodeproj">
+            ReferencedContainer = "container:WatchStocks.xcodeproj">
          </BuildableReference>
       </RemoteRunnable>
       <MacroExpansion>
@@ -98,7 +98,7 @@
             BlueprintIdentifier = "FED623B61BA7419400185BB9"
             BuildableName = "Demo2.app"
             BlueprintName = "Demo2"
-            ReferencedContainer = "container:Demo.xcodeproj">
+            ReferencedContainer = "container:WatchStocks.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -119,7 +119,7 @@
             BlueprintIdentifier = "FED623B61BA7419400185BB9"
             BuildableName = "Demo2.app"
             BlueprintName = "Demo2"
-            ReferencedContainer = "container:Demo.xcodeproj">
+            ReferencedContainer = "container:WatchStocks.xcodeproj">
          </BuildableReference>
       </RemoteRunnable>
       <MacroExpansion>
@@ -128,7 +128,7 @@
             BlueprintIdentifier = "FED623B61BA7419400185BB9"
             BuildableName = "Demo2.app"
             BlueprintName = "Demo2"
-            ReferencedContainer = "container:Demo.xcodeproj">
+            ReferencedContainer = "container:WatchStocks.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

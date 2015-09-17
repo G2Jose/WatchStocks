@@ -17,7 +17,7 @@
                BlueprintIdentifier = "FED7D06A1BA4D5CD00AEA0BA"
                BuildableName = "Demo WatchKit App.app"
                BlueprintName = "Demo WatchKit App"
-               ReferencedContainer = "container:Demo.xcodeproj">
+               ReferencedContainer = "container:WatchStocks.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -31,7 +31,7 @@
                BlueprintIdentifier = "FED7D0581BA4D5CD00AEA0BA"
                BuildableName = "Demo.app"
                BlueprintName = "Demo"
-               ReferencedContainer = "container:Demo.xcodeproj">
+               ReferencedContainer = "container:WatchStocks.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -45,7 +45,7 @@
                BlueprintIdentifier = "FED7D0791BA4D5CE00AEA0BA"
                BuildableName = "Demo WatchKit Extension.appex"
                BlueprintName = "Demo WatchKit Extension"
-               ReferencedContainer = "container:Demo.xcodeproj">
+               ReferencedContainer = "container:WatchStocks.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -63,7 +63,7 @@
             BlueprintIdentifier = "FED7D06A1BA4D5CD00AEA0BA"
             BuildableName = "Demo WatchKit App.app"
             BlueprintName = "Demo WatchKit App"
-            ReferencedContainer = "container:Demo.xcodeproj">
+            ReferencedContainer = "container:WatchStocks.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -90,7 +90,7 @@
             BlueprintIdentifier = "FED7D06A1BA4D5CD00AEA0BA"
             BuildableName = "Demo WatchKit App.app"
             BlueprintName = "Demo WatchKit App"
-            ReferencedContainer = "container:Demo.xcodeproj">
+            ReferencedContainer = "container:WatchStocks.xcodeproj">
          </BuildableReference>
       </RemoteRunnable>
       <MacroExpansion>
@@ -99,7 +99,7 @@
             BlueprintIdentifier = "FED7D06A1BA4D5CD00AEA0BA"
             BuildableName = "Demo WatchKit App.app"
             BlueprintName = "Demo WatchKit App"
-            ReferencedContainer = "container:Demo.xcodeproj">
+            ReferencedContainer = "container:WatchStocks.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -122,7 +122,7 @@
             BlueprintIdentifier = "FED7D06A1BA4D5CD00AEA0BA"
             BuildableName = "Demo WatchKit App.app"
             BlueprintName = "Demo WatchKit App"
-            ReferencedContainer = "container:Demo.xcodeproj">
+            ReferencedContainer = "container:WatchStocks.xcodeproj">
          </BuildableReference>
       </RemoteRunnable>
       <MacroExpansion>
@@ -131,7 +131,7 @@
             BlueprintIdentifier = "FED7D06A1BA4D5CD00AEA0BA"
             BuildableName = "Demo WatchKit App.app"
             BlueprintName = "Demo WatchKit App"
-            ReferencedContainer = "container:Demo.xcodeproj">
+            ReferencedContainer = "container:WatchStocks.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
