@@ -1,11 +1,12 @@
 # WatchStocks
 A simple Apple Watch OS 2 application that keeps track of your stocks portfolio &amp; displays amounts gained or lost in a day. The app also includes a complication that shows this data right on the watch face. 
-All data is obtained from the open source API at (https://github.com/willedflipper66/StocksAPI 
+All HTTP requests are handled by the open source API at (https://github.com/willedflipper66/StocksAPI) 
 
 ##What works
 
-- View a summary of your portfolio including: day's gain, total gain (%), total gain ($).
-- View gains for individual stocks and their current market prices.
+- View a summary of your portfolio including: day's gain, total gain (%), total gain ($)
+- View gains for individual stocks and their current market prices
+- All monetary amounts shown are in Canadian Dollars (CAD)
 
 ##To Do
 
@@ -15,6 +16,8 @@ All data is obtained from the open source API at (https://github.com/willedflipp
 - Add support for more complication layouts
 - Implement automatic complication update. Currently the complication is only updated if the user opens the app
 - Add support for dividends
+- Add functionality to select currency. All values shown currently are in CAD
+- Add functionality on the back end to determine currency of a stock. In its current implementation, the server simply looks for the string "NASDAQ" or "NYSE" in the query term, and if found converts it from USD to CAD based on the API provided by http://fixer.io
 
 ##Screenshots
 
