@@ -18,6 +18,7 @@ All HTTP requests are handled by the open source API at (https://github.com/will
 - Add support for dividends
 - Add functionality to select currency. All values shown currently are in CAD
 - Add functionality on the back end to determine currency of a stock. In its current implementation, the server simply looks for the string "NASDAQ" or "NYSE" in the query term, and if found converts it from USD to CAD based on the API provided by http://fixer.io
+- General code cleanup & bug fixes
 
 ##Screenshots
 
