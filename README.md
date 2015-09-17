@@ -1,5 +1,6 @@
 # WatchStocks
 A simple Apple Watch OS 2 application that keeps track of your stocks portfolio &amp; displays amounts gained or lost in a day. The app also includes a complication that shows this data right on the watch face. 
+All data is obtained from the open source API at (https://github.com/willedflipper66/StocksAPI 
 
 ##What works
 
@@ -13,6 +14,7 @@ A simple Apple Watch OS 2 application that keeps track of your stocks portfolio 
 - Add charts
 - Add support for more complication layouts
 - Implement automatic complication update. Currently the complication is only updated if the user opens the app
+- Add support for dividends
 
 ##Screenshots
 
