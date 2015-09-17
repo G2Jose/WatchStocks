@@ -120,9 +120,9 @@
 		FED7D0501BA4D5CD00AEA0BA = {
 			isa = PBXGroup;
 			children = (
-				FED7D05B1BA4D5CD00AEA0BA /* Demo */,
-				FED7D06F1BA4D5CD00AEA0BA /* Demo WatchKit App */,
-				FED7D07E1BA4D5CE00AEA0BA /* Demo WatchKit Extension */,
+				FED7D05B1BA4D5CD00AEA0BA /* WatchStocks */,
+				FED7D06F1BA4D5CD00AEA0BA /* WatchStocks App */,
+				FED7D07E1BA4D5CE00AEA0BA /* WatchStocks WatchKit Extension */,
 				FED7D05A1BA4D5CD00AEA0BA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -137,7 +137,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FED7D05B1BA4D5CD00AEA0BA /* Demo */ = {
+		FED7D05B1BA4D5CD00AEA0BA /* WatchStocks */ = {
 			isa = PBXGroup;
 			children = (
 				FED7D05C1BA4D5CD00AEA0BA /* AppDelegate.swift */,
@@ -147,20 +147,22 @@
 				FED7D0651BA4D5CD00AEA0BA /* LaunchScreen.storyboard */,
 				FED7D0681BA4D5CD00AEA0BA /* Info.plist */,
 			);
+			name = WatchStocks;
 			path = Demo;
 			sourceTree = "<group>";
 		};
-		FED7D06F1BA4D5CD00AEA0BA /* Demo WatchKit App */ = {
+		FED7D06F1BA4D5CD00AEA0BA /* WatchStocks App */ = {
 			isa = PBXGroup;
 			children = (
 				FED7D0701BA4D5CD00AEA0BA /* Interface.storyboard */,
 				FED7D0731BA4D5CD00AEA0BA /* Assets.xcassets */,
 				FED7D0751BA4D5CD00AEA0BA /* Info.plist */,
 			);
+			name = "WatchStocks App";
 			path = "Demo WatchKit App";
 			sourceTree = "<group>";
 		};
-		FED7D07E1BA4D5CE00AEA0BA /* Demo WatchKit Extension */ = {
+		FED7D07E1BA4D5CE00AEA0BA /* WatchStocks WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
 				FEDABED61BA4E75E00471EF1 /* Portfolio.swift */,
@@ -177,6 +179,7 @@
 				FED7D07F1BA4D5CE00AEA0BA /* Supporting Files */,
 				FE60EBC91BAA85770050A0F9 /* TableRowController.swift */,
 			);
+			name = "WatchStocks WatchKit Extension";
 			path = "Demo WatchKit Extension";
 			sourceTree = "<group>";
 		};

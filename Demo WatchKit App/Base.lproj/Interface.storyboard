@@ -23,6 +23,7 @@
                                                     <fontDescription key="font" type="system" pointSize="12"/>
                                                 </label>
                                             </items>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </group>
                                         <group width="1" alignment="left" id="jvC-fw-SYZ">
                                             <items>
@@ -33,6 +34,7 @@
                                                     <fontDescription key="font" type="system" pointSize="12"/>
                                                 </label>
                                             </items>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </group>
                                         <group width="1" alignment="left" id="iQ2-Sh-TG7">
                                             <items>
@@ -43,11 +45,13 @@
                                                     <fontDescription key="font" type="system" pointSize="12"/>
                                                 </label>
                                             </items>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </group>
                                     </items>
-                                    <color key="backgroundColor" red="0.0" green="0.070588235294117646" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </group>
                                 <button width="1" alignment="left" title="Refresh" id="zMy-1m-Lj3">
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <fontDescription key="font" type="boldSystem" pointSize="12"/>
                                     <connections>
                                         <action selector="refreshButtonAction" destination="AgC-eL-Hgc" id="cnb-Lc-QXl"/>
@@ -67,6 +71,7 @@
                                                                 <fontDescription key="font" type="system" pointSize="12"/>
                                                             </label>
                                                         </items>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     </group>
                                                     <group width="0.5" alignment="left" layout="vertical" id="d29-hl-1vE">
                                                         <items>
@@ -77,8 +82,10 @@
                                                                 <fontDescription key="font" type="system" pointSize="12"/>
                                                             </label>
                                                         </items>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     </group>
                                                 </items>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             </group>
                                             <connections>
                                                 <outlet property="gainAmountOutlet" destination="vLM-Op-R1b" id="aeO-T7-hut"/>
@@ -90,6 +97,7 @@
                                     </items>
                                 </table>
                             </items>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         </group>
                     </items>
                     <connections>
