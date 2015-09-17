@@ -10,14 +10,15 @@ All HTTP requests are handled by the open source API at (https://github.com/will
 
 ##To Do
 
-- Add functionality to add transaction details through iPhone. Currently this needs to be done manually in the Parameters.swift file.
-- Add detailed views
+- Add functionality to add transaction details through iPhone. Currently this needs to be done manually in the Parameters.swift file
+- Show detail view when a user touches a stock item
 - Add charts
 - Add support for more complication layouts
 - Implement automatic complication update. Currently the complication is only updated if the user opens the app
 - Add support for dividends
-- Add functionality to select currency. All values shown currently are in CAD
+- Add functionality to set currency preferences. All values shown currently are in CAD
 - Add functionality on the back end to determine currency of a stock. In its current implementation, the server simply looks for the string "NASDAQ" or "NYSE" in the query term, and if found converts it from USD to CAD based on the API provided by http://fixer.io
+- UI improvements
 - General code cleanup & bug fixes
 
 ##Screenshots
