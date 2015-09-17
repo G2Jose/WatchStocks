@@ -17,4 +17,4 @@ A simple Apple Watch OS 2 application that keeps track of your stocks portfolio 
 ##Screenshots
 
 ![App view](https://raw.githubusercontent.com/willedflipper66/WatchStocks/master/Screenshots/IMG_0746.PNG "App view")
-![Complication view](https://raw.githubusercontent.com/willedflipper66/WatchStocks/master/Screenshots/IMG_0746.PNG "Complication view")
+![Complication view](https://raw.githubusercontent.com/willedflipper66/WatchStocks/master/Screenshots/IMG_0747.PNG "Complication view")
