@@ -12,6 +12,7 @@ import ClockKit
 
 class InterfaceController: WKInterfaceController {
 
+    @IBOutlet var refreshButtonOutlet: WKInterfaceButton!
     @IBOutlet var tableOutlet: WKInterfaceTable!
     @IBOutlet var daysGainOutlet: WKInterfaceLabel!
     
@@ -20,6 +21,16 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet var gainPercentOutlet: WKInterfaceLabel!
     @IBAction func refreshButtonAction() {
         print("---------REFRESH BUTTON PRESSED---------")
+        
+        self.gainPercentOutlet.setTextColor(UIColor.whiteColor())
+        self.daysGainOutlet.setTextColor(UIColor.whiteColor())
+        self.gainOutlet.setTextColor(UIColor.whiteColor())
+        self.gainPercentOutlet.setText("Loading...")
+        self.daysGainOutlet.setText("Loading...")
+        self.gainOutlet.setText("Loading...")
+        
+        self.refreshButtonOutlet.setTitle("Loading...")
+        
         Portfolio.clearPortfolio()
         addStocks()
         update()
@@ -30,6 +41,7 @@ class InterfaceController: WKInterfaceController {
     
     override func willActivate() {
         super.willActivate()
+        
         Portfolio.clearPortfolio()
         addStocks()
         update()
@@ -91,6 +103,7 @@ class InterfaceController: WKInterfaceController {
                     row.stockPriceOutlet.setText("$" + String(format: "%.2f", stock.currentPrice))
                     i++
                 }
+                self.refreshButtonOutlet.setTitle("Refresh")
                 
                 
             }

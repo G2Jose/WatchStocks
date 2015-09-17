@@ -19,7 +19,7 @@
                                                 <label width="0.5" alignment="left" text="Day's gain" id="9b7-iq-lxg">
                                                     <fontDescription key="font" type="system" pointSize="12"/>
                                                 </label>
-                                                <label width="0.5" alignment="left" text="Loading..." id="K6w-rN-hBL" userLabel="Day's Gain">
+                                                <label width="0.5" alignment="left" text="Loading..." textAlignment="right" id="K6w-rN-hBL" userLabel="Day's Gain">
                                                     <fontDescription key="font" type="system" pointSize="12"/>
                                                 </label>
                                             </items>
@@ -30,7 +30,7 @@
                                                 <label width="0.5" alignment="left" text="Total gain" id="3PK-Me-hxA">
                                                     <fontDescription key="font" type="system" pointSize="12"/>
                                                 </label>
-                                                <label width="0.5" alignment="left" text="Loading..." id="VTk-yD-fKM" userLabel="Gain Amount">
+                                                <label width="0.5" alignment="left" text="Loading..." textAlignment="right" id="VTk-yD-fKM" userLabel="Gain Amount">
                                                     <fontDescription key="font" type="system" pointSize="12"/>
                                                 </label>
                                             </items>
@@ -41,7 +41,7 @@
                                                 <label width="0.5" alignment="left" text="Gain %" id="YRh-yr-Mkl">
                                                     <fontDescription key="font" type="system" pointSize="12"/>
                                                 </label>
-                                                <label width="0.5" alignment="left" text="Loading..." id="pW5-4b-5WG" userLabel="Gain %">
+                                                <label width="0.5" alignment="left" text="Loading..." textAlignment="right" id="pW5-4b-5WG" userLabel="Gain %">
                                                     <fontDescription key="font" type="system" pointSize="12"/>
                                                 </label>
                                             </items>
@@ -75,10 +75,10 @@
                                                     </group>
                                                     <group width="0.5" alignment="left" layout="vertical" id="d29-hl-1vE">
                                                         <items>
-                                                            <label width="1" height="0.5" alignment="left" text="Gain (%)" id="k8L-FC-rre">
+                                                            <label width="1" height="0.5" alignment="right" text="Gain (%)" textAlignment="right" id="k8L-FC-rre">
                                                                 <fontDescription key="font" type="system" pointSize="12"/>
                                                             </label>
-                                                            <label width="1" height="0.5" alignment="left" text="Gain ($)" id="vLM-Op-R1b">
+                                                            <label width="1" height="0.5" alignment="right" text="Gain ($)" textAlignment="right" id="vLM-Op-R1b">
                                                                 <fontDescription key="font" type="system" pointSize="12"/>
                                                             </label>
                                                         </items>
@@ -104,6 +104,7 @@
                         <outlet property="daysGainOutlet" destination="K6w-rN-hBL" id="cVL-ob-kj0"/>
                         <outlet property="gainOutlet" destination="VTk-yD-fKM" id="7Qw-Q8-ytX"/>
                         <outlet property="gainPercentOutlet" destination="pW5-4b-5WG" id="4HJ-1z-Cuf"/>
+                        <outlet property="refreshButtonOutlet" destination="zMy-1m-Lj3" id="8mr-fF-uCC"/>
                         <outlet property="tableOutlet" destination="d7r-oD-BpS" id="nci-q2-RB9"/>
                     </connections>
                 </controller>
