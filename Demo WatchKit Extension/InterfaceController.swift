@@ -8,14 +8,16 @@
 
 import WatchKit
 import Foundation
-
+import ClockKit
 
 class InterfaceController: WKInterfaceController {
 
+    @IBOutlet var tableOutlet: WKInterfaceTable!
+    @IBOutlet var daysGainOutlet: WKInterfaceLabel!
+    
+    @IBOutlet var gainOutlet: WKInterfaceLabel!
     
     @IBOutlet var gainPercentOutlet: WKInterfaceLabel!
-    @IBOutlet var gainAmountOutlet: WKInterfaceLabel!
-    
     @IBAction func refreshButtonAction() {
         print("---------REFRESH BUTTON PRESSED---------")
         Portfolio.clearPortfolio()
@@ -26,27 +28,19 @@ class InterfaceController: WKInterfaceController {
         super.awakeWithContext(context)
     }
     
-    
-    var shouldUpdate:Double = 0.0{
-        didSet{
-            print("Finished updating portfolio")
-            gainPercentOutlet.setText(String(format: "%.3f", Portfolio.gainPercent) + "%")
-        }
-    }
-    
     override func willActivate() {
         super.willActivate()
+        Portfolio.clearPortfolio()
         addStocks()
         update()
     }
 
     override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
     
-    func initializeStocks(symbol: String, buyPrice: Double, quantity: Double, commission: Double){
-        Portfolio.addStock(Stock(symbol:symbol, buyPrice: buyPrice, quantity: quantity, commission: commission))
+    func initializeStocks(query: String, buyPrice: Double, quantity: Double, commission: Double){
+        Portfolio.addStock(Stock(query: query, buyPrice: buyPrice, quantity: quantity, commission: commission))
     }
     
     enum JSONError: String, ErrorType {
@@ -56,53 +50,50 @@ class InterfaceController: WKInterfaceController {
     
     func update(){
         print("Running update()")
-        self.gainPercentOutlet.setTextColor(UIColor.whiteColor())
-        self.gainAmountOutlet.setTextColor(UIColor.whiteColor())
-        for (_, stock) in Portfolio.stocks{
-            let urlPath = stock.url
-            guard let endpoint = NSURL(string: urlPath) else { print("Error creating endpoint");return }
-            let request = NSMutableURLRequest(URL:endpoint)
-            self.gainPercentOutlet.setText("Updating...")
-            self.gainAmountOutlet.setText("Updating...")
-            print("Attempting to update stock\(stock.symbol) with url \(stock.url)")
-            NSURLSession.sharedSession().dataTaskWithRequest(request) { (data, response, error) -> Void in
-                do {
-                    guard let dat = data else { throw JSONError.NoData }
-                    guard let json = try NSJSONSerialization.JSONObjectWithData(dat, options: []) as? NSDictionary else { throw JSONError.ConversionFailed }
-                    print("Debug: Updating stock: \(stock.symbol)")
-                    print(json)
-                    let marketValue = json["marketValue"]
-                    stock.currentPrice = (marketValue as! NSString).doubleValue
-                    stock.marketValue = stock.currentPrice * stock.quantity
-                    stock.costBasis = stock.buyPrice * stock.quantity + stock.commission
-                    stock.gainAmount = stock.marketValue  - stock.costBasis
-                    stock.gainPercent = stock.gainAmount / (stock.costBasis) * 100
-                    Portfolio.stocksToUpdate--
-                    if(Portfolio.stocksToUpdate == 0){
-                        dispatch_async(dispatch_get_main_queue()){
-                            print("Updating Portfolio")
-                            Portfolio.updatePortfolio()
-                            var color: UIColor
-                            var prefix: String = ""
-                            if(Portfolio.gainAmount>=0){
-                                color = UIColor.greenColor()
-                                prefix = "+"
-                            }else{
-                                color = UIColor.redColor()
-                                prefix = "-"
-                            }
-                            self.gainPercentOutlet.setText(prefix+(String(format: "%.2f",Portfolio.gainPercent))+"%")
-                            self.gainAmountOutlet.setText(prefix+"$"+(String(format: "%.2f",Portfolio.gainAmount)))
-                            self.gainPercentOutlet.setTextColor(color)
-                            self.gainAmountOutlet.setTextColor(color)
-                        }
-                    }
-                } catch let error as JSONError {
-                    print(error.rawValue)
-                } catch {
-                    print(error)
+        Portfolio.updateStocks()
+        
+        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+        dispatch_async(dispatch_get_global_queue(priority, 0)) {
+            while(Portfolio.stocksToUpdate != 0){
+                //TODO: Code breaks if the next line is removed.
+                var doSomething = true;
+                if(Portfolio.stocksToUpdate == 0){
+                    break
                 }
-                }.resume()
+            }
+            
+            dispatch_async(dispatch_get_main_queue()) {
+                Portfolio.updatePortfolio()
+                Portfolio.log("stocksToUpdate = \(Portfolio.stocksToUpdate)")
+                Portfolio.log("Updating UI")
+                print("Day's gain \(Portfolio.daysGain)")
+                print("Total gain \(Portfolio.gainAmount)")
+                print("Gain % \(Portfolio.gainPercent)")
+                
+                self.gainOutlet.setText(HF.string(Portfolio.gainAmount, format: "$"))
+                self.gainOutlet.setTextColor(HF.getColor(Portfolio.gainAmount))
+                
+                self.gainPercentOutlet.setText(HF.string(Portfolio.gainPercent, format: "%"))
+                self.gainPercentOutlet.setTextColor(HF.getColor(Portfolio.gainPercent))
+                
+                self.daysGainOutlet.setText(HF.string(Portfolio.daysGain, format: "$"))
+                self.daysGainOutlet.setTextColor(HF.getColor(Portfolio.daysGain))
+                self.tableOutlet.setNumberOfRows(Portfolio.stocks.count
+                    , withRowType: "TableRowController")
+                var i = 0
+                for (_, stock) in Portfolio.stocks {
+                    let row = self.tableOutlet.rowControllerAtIndex(i) as! TableRowController
+                    row.symbolOutlet.setText(stock.symbol)
+                    row.gainAmountOutlet.setText(HF.string(stock.gainAmount, format: "$"))
+                    row.gainAmountOutlet.setTextColor(HF.getColor(stock.gainPercent))
+                    row.gainPercentOutlet.setText(HF.string(stock.gainPercent, format: "%"))
+                    row.gainPercentOutlet.setTextColor(HF.getColor(stock.gainPercent))
+                    row.stockPriceOutlet.setText("$" + String(format: "%.2f", stock.currentPrice))
+                    i++
+                }
+                
+                
+            }
         }
     }
     

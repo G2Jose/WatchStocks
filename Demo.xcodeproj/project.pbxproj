@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FEC3EDBE1BA664CC001EC2FC /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC3EDBD1BA664CC001EC2FC /* Parameters.swift */; settings = {ASSET_TAGS = (); }; };
-		FEC3EDC01BA68414001EC2FC /* StocksComplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC3EDBF1BA68414001EC2FC /* StocksComplication.swift */; settings = {ASSET_TAGS = (); }; };
+		FE4D15A21BAA51FA003076D7 /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4D15A11BAA51FA003076D7 /* HelperFunctions.swift */; settings = {ASSET_TAGS = (); }; };
+		FE60EBCA1BAA85770050A0F9 /* TableRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE60EBC91BAA85770050A0F9 /* TableRowController.swift */; settings = {ASSET_TAGS = (); }; };
+		FEC3EDBE1BA664CC001EC2FC /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC3EDBD1BA664CC001EC2FC /* Parameters.swift */; };
+		FEC3EDC01BA68414001EC2FC /* StocksComplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC3EDBF1BA68414001EC2FC /* StocksComplication.swift */; };
 		FED7D05D1BA4D5CD00AEA0BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED7D05C1BA4D5CD00AEA0BA /* AppDelegate.swift */; };
 		FED7D05F1BA4D5CD00AEA0BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED7D05E1BA4D5CD00AEA0BA /* ViewController.swift */; };
 		FED7D0621BA4D5CD00AEA0BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FED7D0601BA4D5CD00AEA0BA /* Main.storyboard */; };
@@ -70,16 +72,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FE4D15A11BAA51FA003076D7 /* HelperFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
+		FE60EBC91BAA85770050A0F9 /* TableRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableRowController.swift; sourceTree = "<group>"; };
 		FEC3EDBD1BA664CC001EC2FC /* Parameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parameters.swift; sourceTree = "<group>"; };
 		FEC3EDBF1BA68414001EC2FC /* StocksComplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StocksComplication.swift; sourceTree = "<group>"; };
-		FEC3EDC61BA73650001EC2FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
-		FEC3EDC81BA73650001EC2FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FEC3EDCA1BA73650001EC2FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FEC3EDD41BA73650001EC2FC /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
-		FEC3EDD61BA73650001EC2FC /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
-		FEC3EDD81BA73650001EC2FC /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
-		FEC3EDDA1BA73650001EC2FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FEC3EDDC1BA73650001EC2FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FED7D0591BA4D5CD00AEA0BA /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FED7D05C1BA4D5CD00AEA0BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FED7D05E1BA4D5CD00AEA0BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -121,36 +117,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FEC3EDC41BA73650001EC2FC /* WatchOS2 */ = {
-			isa = PBXGroup;
-			children = (
-				FEC3EDC51BA73650001EC2FC /* Interface.storyboard */,
-				FEC3EDC81BA73650001EC2FC /* Assets.xcassets */,
-				FEC3EDCA1BA73650001EC2FC /* Info.plist */,
-			);
-			path = WatchOS2;
-			sourceTree = "<group>";
-		};
-		FEC3EDD31BA73650001EC2FC /* WatchOS2 Extension */ = {
-			isa = PBXGroup;
-			children = (
-				FEC3EDD41BA73650001EC2FC /* InterfaceController.swift */,
-				FEC3EDD61BA73650001EC2FC /* ExtensionDelegate.swift */,
-				FEC3EDD81BA73650001EC2FC /* ComplicationController.swift */,
-				FEC3EDDA1BA73650001EC2FC /* Assets.xcassets */,
-				FEC3EDDC1BA73650001EC2FC /* Info.plist */,
-			);
-			path = "WatchOS2 Extension";
-			sourceTree = "<group>";
-		};
 		FED7D0501BA4D5CD00AEA0BA = {
 			isa = PBXGroup;
 			children = (
 				FED7D05B1BA4D5CD00AEA0BA /* Demo */,
 				FED7D06F1BA4D5CD00AEA0BA /* Demo WatchKit App */,
 				FED7D07E1BA4D5CE00AEA0BA /* Demo WatchKit Extension */,
-				FEC3EDC41BA73650001EC2FC /* WatchOS2 */,
-				FEC3EDD31BA73650001EC2FC /* WatchOS2 Extension */,
 				FED7D05A1BA4D5CD00AEA0BA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -198,10 +170,12 @@
 				FED7D0831BA4D5CE00AEA0BA /* ExtensionDelegate.swift */,
 				FED7D0851BA4D5CE00AEA0BA /* NotificationController.swift */,
 				FED7D0871BA4D5CE00AEA0BA /* ComplicationController.swift */,
+				FE4D15A11BAA51FA003076D7 /* HelperFunctions.swift */,
 				FED7D0891BA4D5CE00AEA0BA /* Assets.xcassets */,
 				FED7D08B1BA4D5CE00AEA0BA /* Info.plist */,
 				FEC3EDBF1BA68414001EC2FC /* StocksComplication.swift */,
 				FED7D07F1BA4D5CE00AEA0BA /* Supporting Files */,
+				FE60EBC91BAA85770050A0F9 /* TableRowController.swift */,
 			);
 			path = "Demo WatchKit Extension";
 			sourceTree = "<group>";
@@ -363,7 +337,9 @@
 				FEC3EDC01BA68414001EC2FC /* StocksComplication.swift in Sources */,
 				FED7D0841BA4D5CE00AEA0BA /* ExtensionDelegate.swift in Sources */,
 				FED7D0821BA4D5CE00AEA0BA /* InterfaceController.swift in Sources */,
+				FE60EBCA1BAA85770050A0F9 /* TableRowController.swift in Sources */,
 				FEDABED71BA4E75E00471EF1 /* Portfolio.swift in Sources */,
+				FE4D15A21BAA51FA003076D7 /* HelperFunctions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,14 +359,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FEC3EDC51BA73650001EC2FC /* Interface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FEC3EDC61BA73650001EC2FC /* Base */,
-			);
-			name = Interface.storyboard;
-			sourceTree = "<group>";
-		};
 		FED7D0601BA4D5CD00AEA0BA /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

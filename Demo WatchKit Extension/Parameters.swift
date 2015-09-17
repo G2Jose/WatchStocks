@@ -11,16 +11,12 @@ class Parameters{
 //    static var baseURL: String = "http://192.168.0.18:3000/scrape?q="
     static var baseURL: String = "http://52.3.141.225:443/scrape?q="
 
+    static var debug: Int = 0
     
-    
-    var airports: [String: [String:String]] = [
-        "YYZ": ["Toronto Pearson":""],
-        "DUB": ["Toronto Pearson":""]
-    ]
     
     static var myStocks: [String: [String:Double]] = [
-        "AAPL": [
-            "buyPrice": 98.97,
+        "AAPL+NASDAQ": [
+            "buyPrice": 131.73,
             "quantity": 17,
             "commission":6.95
         ],
