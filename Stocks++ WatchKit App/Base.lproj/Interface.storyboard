@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="8092"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Stocks___WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" alignment="left" layout="vertical" id="T1q-D2-PAN">
+                            <items>
+                                <group width="1" alignment="left" id="Teb-T3-XB6">
+                                    <items>
+                                        <label width="0.5" alignment="left" text="Market value" numberOfLines="0" id="g6j-jw-LGN">
+                                            <fontDescription key="font" type="system" pointSize="14"/>
+                                        </label>
+                                        <label width="0.5" height="1" alignment="left" text="Label" textAlignment="right" numberOfLines="0" id="73H-8T-BE9">
+                                            <fontDescription key="font" type="system" pointSize="14"/>
+                                        </label>
+                                    </items>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </group>
+                                <group width="1" alignment="left" id="pT8-YF-S60">
+                                    <items>
+                                        <label width="0.5" alignment="left" text="Cost basis" numberOfLines="0" id="JkJ-rk-Z4A">
+                                            <fontDescription key="font" type="system" pointSize="14"/>
+                                        </label>
+                                        <label width="0.5" height="1" alignment="left" text="Label" textAlignment="right" numberOfLines="0" id="Ygi-oU-Vu6">
+                                            <fontDescription key="font" type="system" pointSize="14"/>
+                                        </label>
+                                    </items>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </group>
+                                <group width="1" alignment="left" id="g9z-ED-EwU">
+                                    <items>
+                                        <label width="0.5" alignment="left" text="Day's gain" numberOfLines="0" id="abo-qT-IyC">
+                                            <fontDescription key="font" type="system" pointSize="14"/>
+                                        </label>
+                                        <label width="0.5" height="1" alignment="left" text="Label" textAlignment="right" numberOfLines="0" id="K44-fa-iTc">
+                                            <fontDescription key="font" type="system" pointSize="14"/>
+                                        </label>
+                                    </items>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </group>
+                                <group width="1" alignment="left" id="6iB-8W-GnQ">
+                                    <items>
+                                        <label width="0.5" alignment="left" text="  " numberOfLines="0" id="ekM-fU-8ip">
+                                            <fontDescription key="font" type="system" pointSize="14"/>
+                                        </label>
+                                        <label width="0.5" height="1" alignment="left" text="Label" textAlignment="right" numberOfLines="0" id="bu8-Fy-1Tf">
+                                            <fontDescription key="font" type="system" pointSize="14"/>
+                                        </label>
+                                    </items>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </group>
+                                <group width="1" alignment="left" id="cKN-kQ-Tao">
+                                    <items>
+                                        <label width="0.5" alignment="left" text="Total Gain" numberOfLines="0" id="hht-9p-YdS" userLabel="Overall Gain (%)">
+                                            <fontDescription key="font" type="system" pointSize="14"/>
+                                        </label>
+                                        <label width="0.5" height="1" alignment="left" text="Label" textAlignment="right" numberOfLines="0" id="8ZH-4l-Djq">
+                                            <fontDescription key="font" type="system" pointSize="14"/>
+                                        </label>
+                                    </items>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </group>
+                                <group width="1" alignment="left" id="nFY-jG-NaG">
+                                    <items>
+                                        <label width="0.5" alignment="left" text=" " numberOfLines="0" id="3wf-Ed-qQI" userLabel="Overall Gain (%)">
+                                            <fontDescription key="font" type="system" pointSize="14"/>
+                                        </label>
+                                        <label width="0.5" height="1" alignment="left" text="Label" textAlignment="right" numberOfLines="0" id="8CI-YV-UE0">
+                                            <fontDescription key="font" type="system" pointSize="14"/>
+                                        </label>
+                                    </items>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </group>
+                            </items>
+                        </group>
+                        <button width="1" alignment="center" title="Refresh" id="r3s-p8-zte">
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="refreshButtonAction" destination="AgC-eL-Hgc" id="UGD-F8-O7s"/>
+                            </connections>
+                        </button>
+                        <table alignment="left" id="Ptn-ja-8S6">
+                            <items>
+                                <tableRow identifier="StockRow" id="3xO-27-QQR" customClass="StockRow" customModule="Stocks___WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" id="hGX-Cf-bkJ">
+                                        <items>
+                                            <group width="0.5" height="1" alignment="left" layout="vertical" id="Nz5-rq-iu3">
+                                                <items>
+                                                    <label width="1" alignment="left" text="Label" id="Vc5-6g-vNt" userLabel="Symbol">
+                                                        <fontDescription key="font" type="boldSystem" pointSize="14"/>
+                                                    </label>
+                                                    <label width="1" alignment="left" text="Label" id="XwA-Bh-Nu3" userLabel="Price">
+                                                        <fontDescription key="font" type="system" pointSize="14"/>
+                                                    </label>
+                                                </items>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                                            </group>
+                                            <group width="0.5" alignment="left" layout="vertical" id="GLi-YS-L9d">
+                                                <items>
+                                                    <label width="1" alignment="left" text="Label" textAlignment="right" id="QJH-m7-kwK" userLabel="Day's change %">
+                                                        <fontDescription key="font" type="system" pointSize="14"/>
+                                                    </label>
+                                                    <label width="1" alignment="left" text="Label" textAlignment="right" id="iPL-Hs-IBI" userLabel="Day's change $">
+                                                        <fontDescription key="font" type="system" pointSize="14"/>
+                                                    </label>
+                                                </items>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                                            </group>
+                                        </items>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="daysChangeAmountOutlet" destination="iPL-Hs-IBI" id="Rc0-qn-ge2"/>
+                                        <outlet property="daysChangePercentOutlet" destination="QJH-m7-kwK" id="rYj-eB-beK"/>
+                                        <outlet property="priceOutlet" destination="XwA-Bh-Nu3" id="ezf-qJ-ap8"/>
+                                        <outlet property="symbolOutlet" destination="Vc5-6g-vNt" id="mF1-R0-3vv"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="costBasisOutlet" destination="Ygi-oU-Vu6" id="GkJ-er-4il"/>
+                        <outlet property="daysGainAmountOutlet" destination="bu8-Fy-1Tf" id="A5y-pb-1L1"/>
+                        <outlet property="daysGainOutlet" destination="K44-fa-iTc" id="kni-8L-yXa"/>
+                        <outlet property="gainAmountOutlet" destination="8CI-YV-UE0" id="OkG-Ia-6eb"/>
+                        <outlet property="gainPercentOutlet" destination="8ZH-4l-Djq" id="WZC-x1-Etc"/>
+                        <outlet property="marketValueOutlet" destination="73H-8T-BE9" id="tP9-gr-gwP"/>
+                        <outlet property="stockTable" destination="Ptn-ja-8S6" id="yjT-D9-Czs"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="235" y="347"/>
+        </scene>
+        <!--Glance Interface Controller-->
+        <scene sceneID="BOz-TT-tkC">
+            <objects>
+                <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController" customModule="Stocks___WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group alignment="left" id="t8f-Gd-c4y"/>
+                        <group alignment="left" id="uCw-4Q-Ouw"/>
+                    </items>
+                    <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
+                </glanceController>
+            </objects>
+            <point key="canvasLocation" x="235" y="672"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="XkS-y5-khE"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="XkS-y5-khE" id="49B-RR-99y"/>
+                        <segue destination="gdX-wl-uQE" kind="relationship" relationship="dynamicNotificationInterface" id="fKh-qV-3T2"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="235" y="1001"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="KIl-fV-djm">
+            <objects>
+                <controller id="gdX-wl-uQE" customClass="NotificationController" customModule="Stocks___WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="553" y="1001"/>
+        </scene>
+    </scenes>
+</document>
