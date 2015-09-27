@@ -12,12 +12,14 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
     @IBOutlet var marketValueOutlet: WKInterfaceLabel!
-
     @IBAction func refreshButtonAction() {
         Portfolio.done = false
         clearUI()
         computeAndUpdate()
         
+    }
+    @IBAction func switchTableAction() {
+        switchTable()
     }
     @IBOutlet weak var stockTable: WKInterfaceTable!
     @IBOutlet var gainAmountOutlet: WKInterfaceLabel!
@@ -25,6 +27,8 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet var daysGainAmountOutlet: WKInterfaceLabel!
     @IBOutlet var daysGainOutlet: WKInterfaceLabel!
     @IBOutlet var costBasisOutlet: WKInterfaceLabel!
+    
+    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
@@ -67,6 +71,31 @@ class InterfaceController: WKInterfaceController {
             }
             i = i + 1
         }
+    }
+    
+    func switchTable(){
+        if(Constants.toggle == true){
+            var i: Int = 0
+            for (symbol, stock) in Portfolio.stocks {
+                if let row = stockTable.rowControllerAtIndex(i) as? StockRow {
+                    UI.setText(row.daysChangeAmountOutlet, amount: stock.gainAmountT, format: "$")
+                    UI.setText(row.daysChangePercentOutlet, amount: stock.gainPercentT , format: "%")
+                }
+                i = i + 1
+            }
+            Constants.toggle = false
+        } else{
+            var i: Int = 0
+            for (symbol, stock) in Portfolio.stocks {
+                if let row = stockTable.rowControllerAtIndex(i) as? StockRow {
+                    UI.setText(row.daysChangeAmountOutlet, amount: stock.change, format: "$")
+                    UI.setText(row.daysChangePercentOutlet, amount: stock.daysGainPercentT , format: "%")
+                }
+                i = i + 1
+            }
+            Constants.toggle = true
+        }
+        
     }
     
     func updateUI(){

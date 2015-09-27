@@ -81,7 +81,7 @@ class Portfolio{
                 if(self.stocks.count > 1){
                     let responses = ((json["query"] as! NSDictionary)["results"] as! NSDictionary)["quote"] as! NSArray
                     for (item) in responses{
-                        
+                        print(item["symbol"])
                         
                         self.stocks[item["symbol"] as! String]?.update((item["Change"] as! NSString).doubleValue, price: (item["LastTradePriceOnly"] as! NSString).doubleValue)
                     }

@@ -9,4 +9,5 @@
 import Foundation
 class Constants{
     static var url: String = "http://localhost:443/data"
+    static var toggle: Bool = true
 }

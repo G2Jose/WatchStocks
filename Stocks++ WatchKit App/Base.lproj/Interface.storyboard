@@ -14,7 +14,7 @@
                             <items>
                                 <group width="1" alignment="left" id="Teb-T3-XB6">
                                     <items>
-                                        <label width="0.5" alignment="left" text="Market value" numberOfLines="0" id="g6j-jw-LGN">
+                                        <label width="0.5" alignment="left" text="Mkt. value" numberOfLines="0" id="g6j-jw-LGN">
                                             <fontDescription key="font" type="system" pointSize="14"/>
                                         </label>
                                         <label width="0.5" height="1" alignment="left" text="Label" textAlignment="right" numberOfLines="0" id="73H-8T-BE9">
@@ -86,48 +86,57 @@
                                 <action selector="refreshButtonAction" destination="AgC-eL-Hgc" id="UGD-F8-O7s"/>
                             </connections>
                         </button>
-                        <table alignment="left" id="Ptn-ja-8S6">
-                            <items>
-                                <tableRow identifier="StockRow" id="3xO-27-QQR" customClass="StockRow" customModule="Stocks___WatchKit_Extension">
-                                    <group key="rootItem" width="1" height="0.0" alignment="left" id="hGX-Cf-bkJ">
+                        <button alignment="left" id="xRh-nh-5Dn">
+                            <group key="contentGroup" width="1" alignment="left" id="9Tk-zp-4n8">
+                                <items>
+                                    <table alignment="left" id="Ptn-ja-8S6">
                                         <items>
-                                            <group width="0.5" height="1" alignment="left" layout="vertical" id="Nz5-rq-iu3">
-                                                <items>
-                                                    <label width="1" alignment="left" text="Label" id="Vc5-6g-vNt" userLabel="Symbol">
-                                                        <fontDescription key="font" type="boldSystem" pointSize="14"/>
-                                                    </label>
-                                                    <label width="1" alignment="left" text="Label" id="XwA-Bh-Nu3" userLabel="Price">
-                                                        <fontDescription key="font" type="system" pointSize="14"/>
-                                                    </label>
-                                                </items>
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
-                                            </group>
-                                            <group width="0.5" alignment="left" layout="vertical" id="GLi-YS-L9d">
-                                                <items>
-                                                    <label width="1" alignment="left" text="Label" textAlignment="right" id="QJH-m7-kwK" userLabel="Day's change %">
-                                                        <fontDescription key="font" type="system" pointSize="14"/>
-                                                    </label>
-                                                    <label width="1" alignment="left" text="Label" textAlignment="right" id="iPL-Hs-IBI" userLabel="Day's change $">
-                                                        <fontDescription key="font" type="system" pointSize="14"/>
-                                                    </label>
-                                                </items>
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
-                                            </group>
+                                            <tableRow identifier="StockRow" id="3xO-27-QQR" customClass="StockRow" customModule="Stocks___WatchKit_Extension">
+                                                <group key="rootItem" width="1" height="0.0" alignment="left" id="hGX-Cf-bkJ">
+                                                    <items>
+                                                        <group width="0.5" height="1" alignment="left" layout="vertical" id="Nz5-rq-iu3">
+                                                            <items>
+                                                                <label width="1" alignment="left" text="Label" id="Vc5-6g-vNt" userLabel="Symbol">
+                                                                    <fontDescription key="font" type="boldSystem" pointSize="14"/>
+                                                                </label>
+                                                                <label width="1" alignment="left" text="Label" id="XwA-Bh-Nu3" userLabel="Price">
+                                                                    <fontDescription key="font" type="system" pointSize="14"/>
+                                                                </label>
+                                                            </items>
+                                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                                                        </group>
+                                                        <group width="0.5" alignment="left" layout="vertical" id="GLi-YS-L9d">
+                                                            <items>
+                                                                <label width="1" alignment="left" text="Label" textAlignment="right" id="QJH-m7-kwK" userLabel="Day's change %">
+                                                                    <fontDescription key="font" type="system" pointSize="14"/>
+                                                                </label>
+                                                                <label width="1" alignment="left" text="Label" textAlignment="right" id="iPL-Hs-IBI" userLabel="Day's change $">
+                                                                    <fontDescription key="font" type="system" pointSize="14"/>
+                                                                </label>
+                                                            </items>
+                                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                                                        </group>
+                                                    </items>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                                                </group>
+                                                <connections>
+                                                    <outlet property="daysChangeAmountOutlet" destination="iPL-Hs-IBI" id="Rc0-qn-ge2"/>
+                                                    <outlet property="daysChangePercentOutlet" destination="QJH-m7-kwK" id="rYj-eB-beK"/>
+                                                    <outlet property="priceOutlet" destination="XwA-Bh-Nu3" id="ezf-qJ-ap8"/>
+                                                    <outlet property="symbolOutlet" destination="Vc5-6g-vNt" id="mF1-R0-3vv"/>
+                                                </connections>
+                                            </tableRow>
                                         </items>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
-                                    </group>
-                                    <connections>
-                                        <outlet property="daysChangeAmountOutlet" destination="iPL-Hs-IBI" id="Rc0-qn-ge2"/>
-                                        <outlet property="daysChangePercentOutlet" destination="QJH-m7-kwK" id="rYj-eB-beK"/>
-                                        <outlet property="priceOutlet" destination="XwA-Bh-Nu3" id="ezf-qJ-ap8"/>
-                                        <outlet property="symbolOutlet" destination="Vc5-6g-vNt" id="mF1-R0-3vv"/>
-                                    </connections>
-                                </tableRow>
-                            </items>
-                        </table>
+                                    </table>
+                                </items>
+                            </group>
+                            <connections>
+                                <action selector="switchTableAction" destination="AgC-eL-Hgc" id="Xec-eh-6wP"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
                         <outlet property="costBasisOutlet" destination="Ygi-oU-Vu6" id="GkJ-er-4il"/>
